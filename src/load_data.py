@@ -1,10 +1,12 @@
 import pandas as pd
+import os
 
-# Carga el archivo CSV
-df = pd.read_csv("../data/train_and_test2.csv")
+def load_data():
+    """Carga los datos desde el CSV ubicado en la carpeta 'data'"""
+    filepath = os.path.join(os.path.dirname(__file__), "../data/train_and_test2.csv")
+    filepath = os.path.abspath(filepath)
 
-# Visualizar las primeras filas
-print(df.head())
+    if not os.path.exists(filepath):
+        raise FileNotFoundError(f"❌ El archivo {filepath} no existe.")
 
-# Ver la informacion del dataframe (tipos de datos y valores no nulos)
-print(df.info())
+    return pd.read_csv(filepath)

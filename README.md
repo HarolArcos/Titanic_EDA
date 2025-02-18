@@ -17,6 +17,7 @@ Este proyecto realiza un **Análisis Exploratorio de Datos (EDA)** en el conjunt
     ├── src/ (Código fuente en Python)
     ├── README.md (Descripción del proyecto)
     ├── requirements.txt (Librerías necesarias)
+    ├── main.py
 ```
 
 ## 📊 Tecnologías Utilizadas
